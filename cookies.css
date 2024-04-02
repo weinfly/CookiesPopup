@@ -1,0 +1,100 @@
+/* Google Fonts - Poppins @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"); */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #4070f4;
+  position: relative;
+}
+
+.wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  visibility: hidden; /* 初始状态下隐藏弹窗 */
+  opacity: 0; /* 初始状态下设置透明度为0 */
+  transition: visibility 0s, opacity 0.3s; /* 添加过渡效果 */
+}
+
+.wrapper.show {
+  visibility: visible; /* 显示弹窗 */
+  opacity: 1; /* 显示弹窗时设置透明度为1 */
+}
+  
+  .wrapper header {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+  }
+  
+  header i {
+    color: #4070f4;
+    font-size: 32px;
+  }
+  
+  header h2 {
+    color: #4070f4;
+    font-weight: 500;
+  }
+  
+  .wrapper .data {
+    margin: 0 16px;
+  }
+  
+  .wrapper .data p {
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .data p a {
+    color: #4070f4;
+    text-decoration: none;
+  }
+  
+  .data p a:hover {
+    text-decoration: underline;
+  }
+  
+  .wrapper .buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .buttons .button {
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background: #4070f4;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: 10px;
+  }
+  
+  .buttons #acceptBtn:hover {
+    background-color: #034bf1;
+  }
+  
+  #declineBtn {
+    border: 2px solid #4070f4;
+    background-color: #fff;
+    color: #4070f4;
+  }
+  
+  #declineBtn:hover {
+    background-color: #4070f4;
+    color: #fff;
+  }
